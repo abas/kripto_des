@@ -206,6 +206,9 @@ var K = [
     ]
 ]
 
+// map E(Ri)
+var Er = []
+
 // map mutasi P
 var map = [
     16,7,20,21,
@@ -218,4 +221,45 @@ var map = [
     22,11,4,25,
 ]
 
+
+// map mutasi
+var mutasi = [
+    32,1,2,3,4,5,
+    4,5,6,7,8,9,
+    8,9,10,11,12,13,
+    12,13,14,15,16,17,
+    16,17,18,19,20,21,
+    20,21,22,23,24,25,
+    24,25,26,27,28,29,
+    28,29,30,31,32,1
+]
+
+function XoR(a,b){
+    return (a==b) ? 0 : 1 
+}
+
+function er_mut(mutation,bitR){
+    var er = []
+    process.stdout.write("hasil permutasi r0 :\n")
+    for (let i = 0; i < mutation.length; i++) {
+        er.push(bitR[mutation[i]-1])
+    }
+    return er
+}
+
+function k_XoR_er(K,eR){
+    var result = []
+    for(let i=0;i<K.length;i++){
+        result.push(XoR(K[i],eR[i]))
+    }
+    return result
+}
+
+function main(){
+
+    for(let i=0;i<K.length;i++){
+        mutation_r.push(er_mut(mutasi,R[0]))
+    }
+
+}
 

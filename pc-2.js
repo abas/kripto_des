@@ -238,3 +238,4 @@ for(var i = 1;i<=bit.length;i++){
     console.log("")
     console.log("")
 }
+ 
